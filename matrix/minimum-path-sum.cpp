@@ -13,7 +13,7 @@ public:
         int right = solve(grid, i + 1, j, m, n, val);
         int down  = solve(grid, i, j + 1, m, n, val);
 
-        return min(right, down);
+        return grid[i][j] + min(right, down);
     }
 
     int minPathSum(vector<vector<int>>& grid) {
