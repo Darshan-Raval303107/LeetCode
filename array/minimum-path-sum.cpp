@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int solve(vector<vector<int>> grid, int i, int j, int m, int n, int val) {
+    int solve(vector<vector<int>>& grid, int i, int j, int m, int n, int val) {
         if (i >= m || j >= n)
             return INT_MAX;
         val += grid[i][j];
