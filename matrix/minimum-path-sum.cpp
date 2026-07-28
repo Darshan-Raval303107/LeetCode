@@ -3,6 +3,7 @@ public:
     int solve(vector<vector<int>>& grid, int i, int j, int m, int n, int val) {
         if (i >= m || j >= n)
             return INT_MAX;
+            
         val += grid[i][j];
         if (i == m - 1 && j == n - 1) {
             return val;
