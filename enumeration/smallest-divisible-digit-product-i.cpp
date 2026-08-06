@@ -1,12 +1,11 @@
 class Solution {
 public:
     int smallestNumber(int n, int t) {
-        int product = 1;
-
         while(true) {
+            int product = 1;
             int r = n;
             while(r > 0) {
-                product *= r%10;
+                product *= (r%10);
                 r /= 10;
             }
             if(product % t == 0) {
