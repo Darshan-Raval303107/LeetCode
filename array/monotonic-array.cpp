@@ -5,7 +5,7 @@ public:
         bool monotone = true;
         int i = 0,j = 1;
 
-        if(nums[i] < nums[j]) {
+        if(nums[i] <= nums[j]) {
             j++;
             for(i = 1;i < n;i++) {
                 if(j == n) break;
