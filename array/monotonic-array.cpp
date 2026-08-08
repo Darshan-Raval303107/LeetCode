@@ -3,11 +3,11 @@ public:
     bool isMonotonic(vector<int>& nums) {
         int n = nums.size();
         bool monotone = true;
-        int i = 0,j = 1;
+        int i = 0,j = n - 1;
 
-        if(nums[i] <= nums[j]) {
-            j++;
-            for(i = 1;i < n;i++) {
+        if(nums[i] < nums[j]) {
+            j = 1;
+            for(i = 0;i < n;i++) {
                 if(j == n) break;
                 if(nums[i] > nums[j]) {
                     monotone = false;
@@ -16,8 +16,8 @@ public:
                 j++;
             }
         }else{
-            j++;
-            for(i = 1;i < n;i++) {
+            j = 1;
+            for(i = 0;i < n;i++) {
                 if(j == n) break;
                 if(nums[i] < nums[j]) {
                     monotone = false;
