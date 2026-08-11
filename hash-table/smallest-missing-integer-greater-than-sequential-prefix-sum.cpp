@@ -3,6 +3,7 @@ public:
     int missingInteger(vector<int>& nums) {
         int n = nums.size();
         if(n == 1) return nums[0] + 1;
+        set<int>s(nums.begin(),nums.end());
         int cnt = 0;
         int sum = nums[0];
         for(int i = 1;i < n;i++) {
@@ -13,16 +14,11 @@ public:
                 break;
             }
         }
-        for(int i = 0;i < n;i++) {
-            if(sum == nums[i]) {
-                sum++;
-                cnt++;
+        for(int i = 0;;i++) {
+            if(s.find(sum) == s.end()) {
+                return sum;
             }
-        }
-        if(cnt != 0) {
-            return sum + 1;
-        }else{
-            return sum;
+            sum++;
         }
        
     }
