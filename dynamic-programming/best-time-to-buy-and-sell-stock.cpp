@@ -11,7 +11,7 @@ public:
             }
         }
 
-        if(cnt == n - 1) {
+        if(cnt == (n - 1)) {
             return 0;
         }
 
